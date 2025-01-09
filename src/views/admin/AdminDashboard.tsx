@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Layout } from '../../components/layout/Layout';
 import { InterventionForm } from '../../components/forms/intervention/InterventionForm';
 import { InterventionList } from '../../components/interventions/InterventionList';
 import { Intervention } from '../../types';
+import { getInterventions } from '../../services/interventions.service';
 // import { TechnicienList } from './components/TechnicienList';
 // import { InterventionStats } from './components/InterventionStats';
 
 export const AdminDashboard: React.FC = () => {
+  // const [interventions, setInterventions] = useState<Intervention[]>([]);
+
   const handleSubmit = (data: any) => {
     console.log('Form submitted:', data);
     // Ajoutez ici la logique pour traiter les données soumises
   };
+
+  // useEffect(() => {
+  //   const fetchInterventions = async () => {
+  //     try {
+  //       const data = await getInterventions();
+  //       setInterventions(data);
+  //     } catch (error) {
+  //       console.error('Erreur lors de la récupération des interventions:', error);
+  //     }
+  //   };
+
+  //   fetchInterventions();
+  // }, []);
 
   const interventions: Intervention[] = [
     {
