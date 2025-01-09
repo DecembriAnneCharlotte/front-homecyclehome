@@ -21,7 +21,7 @@ export const InterventionForm: React.FC<Props> = ({ onSubmit, initialData }) => 
         <div>
           <label className="block text-sm font-medium text-gray-700">Type</label>
           <select
-            {...register('type')}
+            {...register('intervention_type')}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
           >
             <option value="maintenance">Maintenance</option>
@@ -35,7 +35,7 @@ export const InterventionForm: React.FC<Props> = ({ onSubmit, initialData }) => 
             <input
               type="number"
               step="0.01"
-              {...register('prix')}
+              {...register('intervention_prix')}
               className="block w-full rounded-md border-gray-300 pl-7 focus:border-indigo-500 focus:ring-indigo-500"
             />
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -48,7 +48,7 @@ export const InterventionForm: React.FC<Props> = ({ onSubmit, initialData }) => 
       <div>
         <label className="block text-sm font-medium text-gray-700">Description</label>
         <textarea
-          {...register('description')}
+          {...register('intervention_description')}
           rows={3}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
         />

@@ -24,15 +24,15 @@ export interface MarqueBlanche {
 
 export interface Intervention {
   id: number;
-  type: 'maintenance' | 'réparation';
-  prix: number;
-  description: string;
-  commentaire: string;
-  statut: 'planifiée' | 'en cours' | 'terminée' | 'annulée';
-  date: string;
-  duree: number;
-  clientId: number;
-  technicienId: number;
-  forfaitId: number;
-  zoneId: number;
+  intervention_type: 'maintenance' | 'réparation';
+  intervention_prix: number;
+  intervention_description: string;
+  intervention_commentaire: string;
+  intervention_statut: 'planifiée' | 'en cours' | 'terminée' | 'annulée';
+  intervention_date: string;
+  intervention_duree: number;
+  clientUtilisateurIdUtilisateurId: number;
+  technicienUtilisateurIdUtilisateurId: number;
+  forfaitForfaitIdForfaitId: number;
+  zoneZoneIdZoneId: number;
 }
